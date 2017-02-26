@@ -1,0 +1,8 @@
+{
+  "name": "DMM_MWS/portal-dmmwebsites",
+  "version": "1.35.1",
+  "description": "DMM Website Product WordPress solution",
+  "scripts": {
+    "update-theme": "npm install"
+  },
+}
