@@ -9,7 +9,7 @@
     "post-update-cmd": [
       "@update-theme"
     ],
-    "update-theme": "cd ./wp-content/themes/theme-essential-elite && npm install"
+    "update-theme": "npm init"
   },
   "extra": {
     "wordpress-install-dir": "wp"
