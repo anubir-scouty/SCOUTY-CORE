@@ -2,7 +2,200 @@
   "name": "DMM_MWS/portal-dmmwebsites",
   "version": "1.35.1",
   "description": "DMM Website Product WordPress solution",
-  "scripts": {
-    "update-theme": "npm install"
+  "repositories": [
+    {
+      "type": "vcs",
+      "url": "git@github.dominionenterprises.com:DMM-CW/composer-plugins.git", 
+      "no-api" : true
+    },
+    {
+      "type": "vcs",
+      "url": "git@github.dominionenterprises.com:DMM-CW/enhancements.git",
+      "no-api" : true
+    },
+    {
+      "type": "vcs",
+      "url": "git@github.dominionenterprises.com:DMM-CW/lib-php-common.git",
+      "no-api" : true
+    },
+    {
+      "type": "vcs",
+      "url": "git@github.dominionenterprises.com:DMM-CW/plugin-business-information.git",
+      "no-api" : true
+    },
+    {
+      "type": "vcs",
+      "url": "git@github.dominionenterprises.com:DMM-CW/plugin-captcha.git",
+      "no-api" : true
+    },
+    {
+      "type": "vcs",
+      "url": "git@github.dominionenterprises.com:DMM-CW/plugin-cobrokerage.git",
+      "no-api" : true
+    },
+    {
+      "type": "vcs",
+      "url": "git@github.dominionenterprises.com:DMM-CW/plugin-contact-form.git",
+      "no-api" : true
+    },
+    {
+      "type": "vcs",
+      "url": "git@github.dominionenterprises.com:DMM-CW/plugin-core.git",
+      "no-api" : true
+    },
+    {
+      "type": "vcs",
+      "url": "git@github.dominionenterprises.com:DMM-CW/plugin-oem-showrooms.git",
+      "no-api" : true
+    },
+    {
+      "type": "vcs",
+      "url": "git@github.dominionenterprises.com:DMM-CW/plugin-page-widgets.git",
+      "no-api" : true
+    },
+    {
+      "type": "vcs",
+      "url": "git@github.dominionenterprises.com:DMM-CW-UK/plugins-inventory.git",
+      "no-api" : true
+    },
+    {
+      "type": "vcs",
+      "url": "git@github.dominionenterprises.com:DMM-CW/theme-essential-elite.git",
+      "no-api" : true
+    },
+    {
+      "type": "vcs",
+      "url": "git@github.dominionenterprises.com:DMM-CW/configs.git",
+      "no-api" : true
+    },
+    {
+      "type": "package",
+      "package": {
+        "type": "wordpress-plugin",
+        "name": "redirection",
+        "version": "2.5",
+        "dist": {
+          "type": "zip",
+          "url": "https://downloads.wordpress.org/plugin/redirection.2.5.zip",
+          "reference": "master"
+        },
+        "autoload": {
+          "classmap": ["."]
+        }
+      }
+    },
+    {
+      "type": "package",
+      "package": {
+        "type": "wordpress-plugin",
+        "name": "add-to-any",
+        "version": "1.7.7",
+        "dist": {
+          "type": "zip",
+          "url": "https://downloads.wordpress.org/plugin/add-to-any.1.7.7.zip",
+          "reference": "master"
+        },
+        "autoload": {
+          "classmap": ["."]
+        }
+      }
+    },
+    {
+      "type": "package",
+      "package": {
+        "type": "wordpress-plugin",
+        "name": "carousel",
+        "version": "master",
+        "dist": {
+          "type": "zip",
+          "url": "https://downloads.wordpress.org/plugin/cpt-bootstrap-carousel.1.9.1.zip",
+          "reference": "master"
+        },
+        "autoload": {
+          "classmap": ["."]
+        }
+      }
+    },
+    {
+      "type": "package",
+      "package": {
+        "type": "wordpress-plugin",
+        "name": "seo",
+        "version": "4.2",
+        "dist": {
+          "type": "zip",
+          "url": "https://downloads.wordpress.org/plugin/wordpress-seo.4.2.zip",
+          "reference": "master"
+        },
+        "autoload": {
+          "classmap": ["."]
+        }
+      }
+    },
+    {
+      "type": "package",
+      "package": {
+        "type": "wordpress-plugin",
+        "name": "robots-txt-file",
+        "version": "1.4",
+        "dist": {
+          "type": "zip",
+          "url": "https://downloads.wordpress.org/plugin/robots-txt-file.zip",
+          "reference": "master"
+        },
+        "autoload": {
+          "classmap": ["."]
+        }
+      }
+    },
+    {
+      "type": "vcs",
+      "url": "git@github.dominionenterprises.com:DMM-CW/sitepress-multilingual-cms.git",
+      "no-api" : true
+    }
+  ],
+  "require": {
+    "php": ">=5.6.14",
+    "johnpbloch/wordpress": "4.7.2",
+    "DMM-CW/composer-plugins": "1.0.0",
+    "DMM-CW/configs": "dev-master",
+    "DMM-CW/enhancements": "dev-master",
+    "DMM-CW/lib-php-common": "1.17.0",
+    "DMM-CW/plugin-business-information": "1.5.0",
+    "DMM-CW/plugin-captcha": "1.0.7",
+    "DMM-CW/plugin-cobrokerage": "1.0.9",
+    "DMM-CW/plugin-contact-form": "1.1.8",
+    "DMM-CW/plugin-core": "dev-WWP-1104",
+    "DMM-CW/plugin-oem-showrooms": "1.2.7",
+    "DMM-CW/plugin-page-widgets": "dev-WWP-1104",
+    "DMM-CW-UK/plugins-inventory": "1.3.4",
+    "DMM-CW/theme-essential-elite": "dev-WWP-1104",
+    "redirection": "2.5",
+    "add-to-any": "1.7.7",
+    "carousel": "dev-master",
+    "seo": "4.2",
+    "robots-txt-file": "1.4",
+    "DMM-CW/sitepress-multilingual-cms": "3.1.9.7"
   },
+  "require-dev": {
+    "phpunit/phpunit": "5.3.*",
+    "curl/curl": "1.5.*"
+  },
+  "autoload": {
+    "psr-4": {
+      "DMM_Website_Product_Tests\\": "tests/"
+    }
+  },
+  "scripts": {
+    "post-install-cmd": [
+      "@update-theme"
+    ],
+    "post-update-cmd": [
+      "@update-theme"
+    ],
+    "update-theme": "cd ./wp-content/themes/theme-essential-elite && npm install"
+  },
+  "extra": {
+    "wordpress-install-dir": "wp"
+  }
 }
