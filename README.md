@@ -1,2 +1,1 @@
 # SCOUTY-CORE
-# SCT-Home
