@@ -3,11 +3,14 @@ module.exports = function(grunt){
 	grunt.initConfig({
 		concat: {
 			corecss: {
-				src: ['node_modules/bootstrap/dist/css/bootstrap.min.css'],
+				src: ['node_modules/bootstrap/dist/css/bootstrap.min.css','assets/public/css/style.css'],
 				dest: 'assets/dist/css/scouty.core.css'
 			},
 			corejs: {
-				src: ['node_modules/bootstrap/dist/js/bootstrap.min.js'],
+				src: [
+					'node_modules/jquery/dist/jquery.min.js',
+					'node_modules/bootstrap/dist/js/bootstrap.min.js'
+				],
 				dest: 'assets/dist/js/scouty.core.js'
 			},/*
 			eventcss: {
@@ -44,24 +47,14 @@ module.exports = function(grunt){
 		  },
 		  target: {
 		    files: {
-		      'assets/dist/css/core.min.css': ['assets/dist/css/core.css']
+		      'assets/dist/css/scouty.core.css': ['assets/dist/css/scouty.core.css']
 		    }
 		  }
 		},
 		uglify: {
 		    corejs: {
 		      files: {
-		        'assets/dist/js/core.min.js': ['assets/dist/js/core.min.js']
-		      }
-		    },
-		    nominationjs: {
-		      files: {
-		        'plugins/about/dist/js/nomination.min.js': ['plugins/about/dist/js/nomination.min.js']
-		      }
-		    },
-		    shaktigallery: {
-		      files: {
-		        'plugins/about/dist/js/gallery.min.js': ['plugins/about/dist/js/gallery.min.js']
+		        'assets/dist/js/scouty.core.js': ['assets/dist/js/scouty.core.js']
 		      }
 		    }
 		},
@@ -81,7 +74,7 @@ module.exports = function(grunt){
 	grunt.loadNpmTasks('grunt-contrib-cssmin');
 	grunt.loadNpmTasks('grunt-contrib-uglify');
 
-	grunt.registerTask('default', ['concat']);
+	grunt.registerTask('default', ['concat','cssmin','uglify']);
 	grunt.registerTask('corecss', ['concat:corecss','cssmin']);
 	grunt.registerTask('concat-corejs', ['concat:corejs','cssmin']);
 	grunt.registerTask('uglify-corejs', ['uglify:corejs']);
