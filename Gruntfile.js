@@ -1,30 +1,18 @@
 module.exports = function(grunt){
 
-	grunt.loadNpmTasks('grunt-contrib-less');
-  grunt.loadNpmTasks('grunt-contrib-watch');
-
 	grunt.initConfig({
-		// less: {
-		//   development: {
-		//     options: {
-		//       compress: true,
-		//       yuicompress: false,
-		//       optimization: 2
-		//     },
-		//     files: {
-		//       "public/css/main.css": "public/less/main.less" // destination file and source file
-		//     }
-		//   }
-		// },
 		concat: {
 			corecss: {
-				src: ['assets/public/css/**.css','http://fonts.googleapis.com/css?family=Droid+Serif:400,700'],
-				dest: 'assets/dist/css/core.css'
+				src: ['node_modules/bootstrap/dist/css/bootstrap.min.css','assets/public/css/style.css'],
+				dest: 'assets/dist/css/scouty.core.css'
 			},
-			homecss: {
-				src: ['plugins/home/assets/css/**.css'],
-				dest: 'plugins/home/dist/css/home.min.css'
-			},
+			corejs: {
+				src: [
+					'node_modules/jquery/dist/jquery.min.js',
+					'node_modules/bootstrap/dist/js/bootstrap.min.js'
+				],
+				dest: 'assets/dist/js/scouty.core.js'
+			},/*
 			eventcss: {
 				src: ['plugins/events/assets/css/**.css'],
 				dest: 'plugins/events/dist/css/events.min.css'
@@ -50,7 +38,7 @@ module.exports = function(grunt){
 					'assets/public/js/rubick_pres.js'
 				],
 				dest: 'assets/dist/js/core.min.js'
-			},
+			},*/
 		},
 		cssmin: {
 		  options: {
@@ -59,26 +47,14 @@ module.exports = function(grunt){
 		  },
 		  target: {
 		    files: {
-		      'plugins/home/dist/css/home.min.css': ['plugins/home/dist/css/home.min.css'],
-		      'plugins/events/dist/css/events.min.css': ['plugins/events/dist/css/events.min.css'],
-		      'assets/dist/css/core.min.css': ['assets/dist/css/core.css']
+		      'assets/dist/css/scouty.core.css': ['assets/dist/css/scouty.core.css']
 		    }
 		  }
 		},
 		uglify: {
 		    corejs: {
 		      files: {
-		        'assets/dist/js/core.min.js': ['assets/dist/js/core.min.js']
-		      }
-		    },
-		    nominationjs: {
-		      files: {
-		        'plugins/about/dist/js/nomination.min.js': ['plugins/about/dist/js/nomination.min.js']
-		      }
-		    },
-		    shaktigallery: {
-		      files: {
-		        'plugins/about/dist/js/gallery.min.js': ['plugins/about/dist/js/gallery.min.js']
+		        'assets/dist/js/scouty.core.js': ['assets/dist/js/scouty.core.js']
 		      }
 		    }
 		},
@@ -98,7 +74,7 @@ module.exports = function(grunt){
 	grunt.loadNpmTasks('grunt-contrib-cssmin');
 	grunt.loadNpmTasks('grunt-contrib-uglify');
 
-	grunt.registerTask('default', ['concat:homecss','cssmin']);
+	grunt.registerTask('default', ['concat','cssmin','uglify']);
 	grunt.registerTask('corecss', ['concat:corecss','cssmin']);
 	grunt.registerTask('concat-corejs', ['concat:corejs','cssmin']);
 	grunt.registerTask('uglify-corejs', ['uglify:corejs']);
