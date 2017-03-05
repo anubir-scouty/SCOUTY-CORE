@@ -1,6 +1,8 @@
 *.gitignore
+sftp-config.json
 Gruntfile.js
 package.json
 .phpintel/
 /equinox/*
 node_modules/*
+
