@@ -1,13 +1,9 @@
 
-
-	  <div class="mastfoot">
-	    <div class="inner">
-	      <p>Copyright &copy; <a href="http://scouty.io">Scouty</a></p>
-	    </div>
-	  </div>
-
-  	</div>
-
-  </div>
-
-</div><!-- End site wrapper -->
+	</div><!-- end container -->
+</section><!-- end page -->
+<section id="footer">
+	<div class="container">
+		<p>Copyright &copy; <a href="http://scouty.io">Scouty</a></p>
+	</div>
+</section>
+<!-- end #footer -->
