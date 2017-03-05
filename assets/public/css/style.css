@@ -154,6 +154,63 @@ body {
   }
 }
 
+/* Navbar */
+
+.navbar-default {
+  background: transparent;
+  border: none;
+}
+.navbar-default .navbar-brand {
+  display: table;
+  padding: 0px;
+  height: auto;
+}
+.navbar-nav {
+  margin-top: 10px;
+}
+.navbar-default .navbar-nav>li>a, .navbar-default .navbar-text {
+  color: #fff!important;
+  text-shadow: none;
+}
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover {
+  background-color: transparent!important;
+  color: #fff!important;
+}
+.navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:focus, .navbar-default .navbar-nav>.open>a:hover {
+  background-color: transparent!important;
+}
+.dropdown-menu>li>a {
+  color: #666;
+  text-shadow: none;
+}
+.navbar-brand > img {
+  width: 80px;
+  display: table-cell;
+  vertical-align: middle;
+}
+.navbar-brand > span {
+  color: #fff;
+  font-family: Montserrat;
+  font-weight: 600;
+  margin-left: 0px;
+  margin-top: 10px;
+  display: table-cell;
+  font-size: 30px;
+  text-transform: uppercase;
+  vertical-align: middle;
+}
+/* End Navbar*/
+
+/* Page */
+#page {
+  padding: 20px 0;
+}
+
+/* Footer */
+#footer {
+}
+/* End Footer */
+
 @media (min-width: 992px) {
   .masthead,
   .mastfoot,

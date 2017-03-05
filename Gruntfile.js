@@ -12,9 +12,28 @@ module.exports = function(grunt){
 					'node_modules/bootstrap/dist/js/bootstrap.min.js',
 					'node_modules/jquery-validation/dist/jquery.validate.min.js',
 					'node_modules/jquery-validation/dist/additional-methods.js',
+					'assets/public/js/script.js'
 				],
 				dest: 'assets/dist/js/scouty.core.js'
 			},
+			homecss: {
+				src: [
+					'plugins/home/assets/css/home.css'
+				],
+				dest: 'plugins/home/dist/css/home.min.css'
+			},
+			homejs: {
+				src: [
+					'plugins/home/assets/js/home.js'
+				],
+				dest: 'plugins/home/dist/js/home.min.js'
+			},
+			aboutjs: {
+				src: [
+					'plugins/about2/assets/js/home.js'
+				],
+				dest: 'plugins/about2/dist/js/home.min.js'
+			}
 		},
 		cssmin: {
 		  options: {
@@ -23,14 +42,16 @@ module.exports = function(grunt){
 		  },
 		  target: {
 		    files: {
-		      'assets/dist/css/scouty.core.css': ['assets/dist/css/scouty.core.css']
+		      'assets/dist/css/scouty.core.css': ['assets/dist/css/scouty.core.css'],
+		      'plugins/home/dist/css/home.min.css': ['plugins/home/dist/css/home.min.css']
 		    }
 		  }
 		},
 		uglify: {
 		    corejs: {
 		      files: {
-		        'assets/dist/js/scouty.core.js': ['assets/dist/js/scouty.core.js']
+		        'assets/dist/js/scouty.core.js': ['assets/dist/js/scouty.core.js'],
+		        'plugins/home/dist/js/home.min.js': ['plugins/home/dist/js/home.min.js']
 		      }
 		    }
 		},
