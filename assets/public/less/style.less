@@ -1,0 +1,192 @@
+// Color variables (appears count calculates by raw css)
+@white: #ffffff;
+@color1: #333333;
+@color2: #a9a9a9;
+@full: 100%;
+
+a {
+	color: @white;
+	&:focus {
+		color: @white;
+	}
+	&:hover {
+		color: @white;
+	}
+}
+.btn-default {
+	background-color: @white;
+	border: 1px solid @white;
+	color: @color1;
+	text-shadow: none;
+	&:hover {
+		background-color: @white;
+		border: 1px solid @white;
+		color: @color1;
+		text-shadow: none;
+	}
+	&:focus {
+		background-color: @white;
+		border: 1px solid @white;
+		color: @color1;
+		text-shadow: none;
+	}
+}
+html {
+	background-color: @color1;
+	height: @full;
+}
+body {
+	background-color: @color1;
+	color: @white;
+	height: @full;
+	text-align: center;
+	text-shadow: 0 1px 3px rgba(0,0,0,.5);
+}
+.site-wrapper {
+	-webkit-box-shadow: inset 0 0 100px rgba(0,0,0,.5);
+	box-shadow: inset 0 0 100px rgba(0,0,0,.5);
+	display: table;
+	height: @full;
+	min-height: @full;
+	width: @full;
+}
+.site-wrapper-inner {
+	display: table-cell;
+	vertical-align: middle;
+	vertical-align: top;
+}
+.cover-container {
+	margin-left: auto;
+	margin-right: auto;
+	width: @full;
+}
+.inner {
+	padding: 30px;
+}
+.masthead-brand {
+	margin-bottom: 10px;
+	margin-top: 10px;
+}
+.masthead-nav>li {
+	display: inline-block;
+}
+.masthead-nav>li+li {
+	margin-left: 20px;
+}
+.masthead-nav>li>a {
+	border-bottom: 2px solid transparent;
+	color: @white;
+	color: rgba(255,255,255,.75);
+	font-size: 16px;
+	font-weight: bold;
+	padding-left: 0;
+	padding-right: 0;
+	&:hover {
+		background-color: transparent;
+		border-bottom-color: @color2;
+		border-bottom-color: rgba(255,255,255,.25);
+	}
+	&:focus {
+		background-color: transparent;
+		border-bottom-color: @color2;
+		border-bottom-color: rgba(255,255,255,.25);
+	}
+}
+.masthead-nav>.active>a {
+	border-bottom-color: @white;
+	color: @white;
+	&:hover {
+		border-bottom-color: @white;
+		color: @white;
+	}
+	&:focus {
+		border-bottom-color: @white;
+		color: @white;
+	}
+}
+.masthead-nav {
+	float: right;
+}
+.cover {
+	padding: 0 20px;
+	.btn-lg {
+		font-weight: bold;
+		padding: 10px 20px;
+	}
+}
+.mastfoot {
+	bottom: 0;
+	color: #999999;
+	color: rgba(255,255,255,.5);
+	position: fixed;
+	width: @full;
+}
+.masthead {
+	width: @full;
+}
+.navbar-default {
+	background: transparent;
+	border: none;
+	.navbar-brand {
+		display: table;
+		height: auto;
+		padding: 0px;
+	}
+	.navbar-nav>li>a {
+		color: @white!important;
+		text-shadow: none;
+	}
+	.navbar-text {
+		color: @white!important;
+		text-shadow: none;
+	}
+	.navbar-nav>.active>a {
+		background-color: transparent!important;
+		color: @white!important;
+		&:focus {
+			background-color: transparent!important;
+			color: @white!important;
+		}
+		&:hover {
+			background-color: transparent!important;
+			color: @white!important;
+		}
+	}
+	.navbar-nav>.open>a {
+		background-color: transparent!important;
+		&:focus {
+			background-color: transparent!important;
+		}
+		&:hover {
+			background-color: transparent!important;
+		}
+	}
+}
+.navbar-nav {
+	margin-top: 10px;
+}
+.dropdown-menu>li>a {
+	color: #666666;
+	text-shadow: none;
+}
+.navbar-brand>img {
+	display: table-cell;
+	vertical-align: middle;
+	width: 50px;
+}
+.navbar-brand>span {
+	color: @white;
+	display: table-cell;
+	font-family: Montserrat;
+	font-size: 30px;
+	font-weight: 600;
+	margin-left: 0px;
+	margin-top: 10px;
+	text-transform: uppercase;
+	vertical-align: middle;
+}
+#page {
+	padding: 20px 0;
+}
+#footer {
+}
