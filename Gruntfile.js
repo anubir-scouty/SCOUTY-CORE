@@ -1,6 +1,14 @@
 module.exports = function(grunt){
 
 	grunt.initConfig({
+		less: {
+			development: {
+				files: {
+					'assets/public/css/style.css': 'assets/public/less/style.less',
+					'plugins/home/assets/css/home.css': 'plugins/home/assets/less/home.less',
+				}
+			},
+		},
 		concat: {
 			corecss: {
 				src: ['node_modules/bootstrap/dist/css/bootstrap.min.css','assets/public/css/style.css'],
@@ -66,10 +74,11 @@ module.exports = function(grunt){
 		}
 	});
 
+	grunt.loadNpmTasks('grunt-contrib-less');
 	grunt.loadNpmTasks('grunt-contrib-concat');
 	grunt.loadNpmTasks('grunt-contrib-watch');
 	grunt.loadNpmTasks('grunt-contrib-cssmin');
 	grunt.loadNpmTasks('grunt-contrib-uglify');
 
-	grunt.registerTask('default', ['concat','cssmin','uglify']);
+	grunt.registerTask('default', ['less','concat','cssmin','uglify']);
 };
