@@ -37,6 +37,8 @@ class View extends Apps {
         $this->html_string .= "<meta name=\"description\" content=\"" . $this->meta_desc . "\">\n";
         $this->html_string .= "<meta name=\"keywords\" content=\"" . $this->meta_keywords . "\">\n";
         $this->html_string .= "<meta name=\"robots\" content=\"index," . $this->search_index . "\" />\n";
+        $this->html_string .= "<link rel=\"shortcut icon\" href=\"" . _RES_  . "favicon.ico\">\n";
+
         // $html .= $this->meta ? $this->meta : "";
 				echo $this->html_string;
     }

@@ -1,4 +1,7 @@
-// Color variables (appears count calculates by raw css)
+@import './buttons.less';
+@import './typography.less';
+
+
 @white: #ffffff;
 @color1: #333333;
 @color2: #a9a9a9;
@@ -11,24 +14,6 @@ a {
 	}
 	&:hover {
 		color: @white;
-	}
-}
-.btn-default {
-	background-color: @white;
-	border: 1px solid @white;
-	color: @color1;
-	text-shadow: none;
-	&:hover {
-		background-color: @white;
-		border: 1px solid @white;
-		color: @color1;
-		text-shadow: none;
-	}
-	&:focus {
-		background-color: @white;
-		border: 1px solid @white;
-		color: @color1;
-		text-shadow: none;
 	}
 }
 html {
@@ -131,59 +116,69 @@ body {
 		display: table;
 		height: auto;
 		padding: 0px;
-	}
-	.navbar-nav>li>a {
-		color: @white!important;
-		text-shadow: none;
+		/*header logo*/
+		img {
+			display: table-cell;
+			vertical-align: middle;
+			width: 50px;
+		}
+		span {
+			color: @white;
+			display: table-cell;
+			font-family: Montserrat;
+			font-size: 30px;
+			font-weight: 600;
+			padding-left: 10px;
+			text-transform: uppercase;
+			vertical-align: middle;
+		}
 	}
 	.navbar-text {
 		color: @white!important;
 		text-shadow: none;
 	}
-	.navbar-nav>.active>a {
-		background-color: transparent!important;
-		color: @white!important;
-		&:focus {
-			background-color: transparent!important;
-			color: @white!important;
+	.navbar-nav {
+		li { 
+			a {
+				color: @white!important;
+				text-shadow: none;
+			}
 		}
-		&:hover {
-			background-color: transparent!important;
-			color: @white!important;
+		.active {
+			a {
+				background-color: transparent!important;
+				color: @white!important;
+				&:focus {
+					background-color: transparent!important;
+					color: @white!important;
+				}
+				&:hover {
+					background-color: transparent!important;
+					color: @white!important;
+				}
+			}
 		}
-	}
-	.navbar-nav>.open>a {
-		background-color: transparent!important;
-		&:focus {
-			background-color: transparent!important;
-		}
-		&:hover {
-			background-color: transparent!important;
+		.open {
+			a {
+				background-color: transparent!important;
+				&:focus {
+					background-color: transparent!important;
+				}
+				&:hover {
+					background-color: transparent!important;
+				}
+			}
 		}
 	}
 }
+/* Right Nav */
 .navbar-nav {
-	margin-top: 10px;
-}
-.dropdown-menu>li>a {
-	color: #666666;
-	text-shadow: none;
-}
-.navbar-brand>img {
-	display: table-cell;
-	vertical-align: middle;
-	width: 50px;
-}
-.navbar-brand>span {
-	color: @white;
-	display: table-cell;
-	font-family: Montserrat;
-	font-size: 30px;
-	font-weight: 600;
-	margin-left: 0px;
-	margin-top: 10px;
-	text-transform: uppercase;
-	vertical-align: middle;
+	.dropdown-menu {
+		li > a {
+			color: #666666;
+			text-shadow: none;
+		}
+	}
 }
 #page {
 	padding: 20px 0;
